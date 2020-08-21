@@ -11,6 +11,7 @@
       response.write(" is: ")
     Else
       response.write(" are: ")
+    End If
     %>
     </p>
     <h1>
@@ -19,6 +20,16 @@
     response.write(users)
     %>
     </h1>
+    <p>
+    active
+    <%
+    If users=1 Then
+      response.write(" connection")
+    Else
+      response.write(" connections")
+    End If
+    %>
+    </p>
     <script languge="vbscript" runat="server">
       Sub Application On_Start
         application("vartime")=""
